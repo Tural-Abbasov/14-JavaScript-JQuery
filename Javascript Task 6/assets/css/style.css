@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+
+
+/* Task One  */
+
+
+
+.todoBox {
+  width: 80%;
+  background-color: rgb(0, 149, 255);
+  margin: 100px;
+  padding: 50px;
+}
+
+.todoBox h1 {
+  color: white;
+  font-size: 60px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.inputBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#textInput {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+}
+
+#addBtn {
+  width: 10%;
+  background-color: #FF8C69;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+li.done .taskText {
+  text-decoration: line-through;
+}
+
+.deleteBtn {
+  background-color: rgb(0, 149, 255);
+  border: none;
+  cursor: pointer;
+  -webkit-text-stroke: 2px black;
+  color: red;
+  font-size: 30px;
+}
+
+.completeBtn {
+  padding: 0px 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+
+/* Task two  */
+
+
+.mainBoxTwo{
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.textBox p {
+  width: 100px;
+  height: 37px;
+  display: inline-block;
+  margin: 30px 10px;
+  padding: 7px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 7px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.selected {
+  background-color: blue !important;
+  color: white;
+  
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 100%;
+  height: 75%;
+}
+
+.card {
+  width: 30%;
+  height: 360px;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body p:first-child{
+  font-size: 20px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+
+
+/* Task three  */
+
+.mainBox{
+  position: relative;
+}
+
+.addBtnTwo{
+  margin: 50px 0px;
+}
+
+.rowBtn {  
+  background-color: #333;  
+  color: white;  
+  border: none;  
+  padding: 13px 35px;  
+  font-size: 20px;  
+  cursor: pointer;  
+}  
+
+.rowBtn:hover {  
+  background-color: #444;  
+}  
+
+.searchBox{
+  margin: 100px 0px 70px 100px;
+  text-align: center;
+}
+
+#searchBar {  
+  width: 90%;  
+  padding: 10px 10px;  
+  font-size: 25px;  
+  border: 1px solid #ccc;  
+  border-radius: 10px;
+}  
+
+.tableBox {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0px 163px;
+  position: relative;
+}
+
+.small{
+  width: 70px;
+  height: auto;
+}
+
+.tableBox th, td {
+  border: 1px solid #ddd;
+  padding: 3px;
+  text-align: center;
+}
+
+.edit-icon {  
+  font-size: 30px;
+  color: #007bff;  
+  cursor: pointer;  
+}  
+  
+.remove-icon {  
+  font-size: 30px;
+  color: #ff0000;  
+  cursor: pointer;  
+}  
+  
+.modalBox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0px 20px;
+  border: 1px solid #888;
+  width: 65%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  gap: 15px;
+}
+
+.inputBoxTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputBoxTwo input{
+  border: none;
+  border-radius: 5px;
+  margin: auto;
+  width: 76%;
+  height: 55px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.closeBtn {
+  align-self: flex-end;
+  color: #f1ecec;
+  font-size: 70px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#editForm button[type="submit"] {
+  align-self: flex-start;
+  background-color: #4CAF50;
+  color: white;
+  padding: 13px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 125px;
+}
+
+#editForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Task four */
+
+
+
+.BgBox{
+  background-color: #03c4d9;
+}
+
+.mainBoxThree{
+  padding: 10px 0px 30px 0px;
+}
+
+.mainIconBox {
+  width: 80px;
+  height: 80px;
+  /* margin-left: auto;
+  margin-right: 50px; */
+  /* padding: 10px; */
+  margin: 10px 50px 50px auto;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mainIconBox img{
+  width: 100%;
+  height: 100%;
+}
+
+.quantity{
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid #FFD700;
+  border-radius: 50px;
+  font-size: 20px;
+  padding-top: 1px;
+  /* padding-left: px; */
+  color: #FFD700;
+}
+
+.productCard {
+  width: 90%;
+  display: flex;
+  margin: 25px 0px;
+  border: 2px solid #FFD700;
+  border-radius: 13px;
+  background-color: #5500ff;
+}
+
+.productCard img {
+  width: 230px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.productInfo {
+  padding: 40px 0px 0px 300px;
+  /* margin: auto; */
+}
+
+.productInfo h2 {
+  margin: auto;
+  font-size: 30px;
+  color: #FFF;
+  padding-bottom: 20px;
+}
+
+.productInfo p {
+  font-size: 25px;
+  color: #FFF;
+  padding-bottom: 20px;
+}
+
+.add-to-cart {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #FFF;
+}
+
+.add-to-cart img {
+  /* font-size: 30px; */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+.modalBoxTwo {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45%;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: white;
+  width: 90%; /* Modalın içindəki kontentin tam genişliyi əhatə etməsi üçün */
+  padding: 50px 30px;
+  border-radius: 8px 0 0 8px; /* Sağ tərəfdə açıldığından sol tərəf radius olmalıdır */
+  position: relative;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #5500ff;
+  /* padding: 5px 5px; */
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+}
+
+.item-img {
+  width: 30%;
+  height: 30%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-details p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.total {
+  font-size: 18px;
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
